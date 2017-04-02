@@ -1,0 +1,7 @@
+language: python
+python:
+  - "2.7"
+install:
+  - pip install -r requirements.txt
+script: python szabot.py ORLVAAT.SZE
+# ORLVAAT.SZE this is the author eha

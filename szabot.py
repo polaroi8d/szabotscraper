@@ -13,7 +13,7 @@ URL = 'http://www.math.u-szeged.hu/~szbtmsz/kalkulus/quiz.php'
 
 def argument_parse():
     parser = argparse.ArgumentParser(description="SzaboT Scrapper 1.0")
-    parser.add_argument("eha", action="store", nargs="?", default="ABCDEFG.SZE", help="type your EHA code")
+    parser.add_argument("eha", action="store", nargs="?", default="ABCDEFG.SZE", help="type your EHA code (required)")
     args = parser.parse_args()
 
     return args

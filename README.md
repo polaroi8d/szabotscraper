@@ -3,6 +3,7 @@ Szabot scraper :nut_and_bolt:
 
 This is a simple tool, which helps you to get your test results easily with python. If you want to contribute to the project, please read the associated topic in the docs. Feel free to ask questions. :nut_and_bolt:
 
+[![Build Status](https://travis-ci.org/polaroi8d/szabotscraper.svg?branch=master)](https://travis-ci.org/polaroi8d/szabotscraper)
 
 ### Requirements
 
