@@ -1,12 +1,10 @@
 Szabot scraper :nut_and_bolt:
 ===================
 
-This is a simple tool, which helps you to get your test results easily with python. If you want to contribute to the project, please reade the associated topic in the docs. Feel free to ask questions. :nut_and_bolt:
-
-----------
+This is a simple tool, which helps you to get your test results easily with python. If you want to contribute to the project, please read the associated topic in the docs. Feel free to ask questions. :nut_and_bolt:
 
 
-###Requirements
+### Requirements
 
 Run `pip install -r requirements.txt` to install all the dependencies:
 
@@ -14,20 +12,20 @@ Run `pip install -r requirements.txt` to install all the dependencies:
  - mechanize
  - argparse
  
-###Install
+### Install
 
 
-###Usage
+### Usage
 
 Simply add your EHA in the first argumentum.
     `python szabot.py abcdefg.sze`
 
-###Tested on
+### Tested on
 
  - macOS Sierra 10.12.3 & python 2.7.13 :cookie:
 
 
-###License
+### License
 
 **Szabot scraper** :nut_and_bolt: is open source software under the Apache License 2.0. Complete license and copyright information can be found in the source code.
 

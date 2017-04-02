@@ -6,18 +6,28 @@ import argparse
 import mechanize
 import sys
 reload(sys)
-sys.setdefaultencoding('utf-8')
+sys.setdefaultencoding('utf-8')  # use utf-8 encoding
 
 URL = 'http://www.math.u-szeged.hu/~szbtmsz/kalkulus/quiz.php'
 
 
 def argument_parse():
     parser = argparse.ArgumentParser(description="SzaboT Scrapper 1.0")
-    parser.add_argument("eha", action="store", nargs="?", default="ABCDEFG.SZE")
+    parser.add_argument("eha", action="store", nargs="?", default="ABCDEFG.SZE", help="type your EHA code")
     args = parser.parse_args()
 
     return args
 
+def parse_table(soup):
+    data = []
+    table = soup.find('table')
+    table_body = soup.find('tbody')
+    rows = table_body.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele])
+    return data
 
 def main():
     br = mechanize.Browser()
@@ -38,14 +48,7 @@ def main():
     response = br.response()
     soup = BeautifulSoup(response, 'html5lib')
 
-    data = []
-    table = soup.find('table')
-    table_body = soup.find('tbody')
-    rows = table_body.find_all('tr')
-    for row in rows:
-        cols = row.find_all('td')
-        cols = [ele.text.strip() for ele in cols]
-        data.append([ele for ele in cols if ele])
+    data = parse_table(soup)
 
     sum_points = 0
     cnt = 0
