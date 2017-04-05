@@ -5,21 +5,27 @@ This is a simple tool, which helps you to get your test results easily with pyth
 
 [![Build Status](https://travis-ci.org/polaroi8d/szabotscraper.svg?branch=master)](https://travis-ci.org/polaroi8d/szabotscraper)
 
+
+![szabotscrapcer_gif](http://orbanlevi.hu/szabotscraper_intro.gif)
+
+
 ### Requirements
 
 Run `pip install -r requirements.txt` to install all the dependencies:
 
- - BeautifulSoup
- - mechanize
- - argparse
+- bs4
+- BeautifulSoup
+- argparse
+- mechanize
+- html5lib
  
-### Install
-
 
 ### Usage
 
 Simply add your EHA in the first argumentum.
     `python szabot.py abcdefg.sze`
+
+More powerfull usage if you add your ~/.bashrc file with alias like the gif above. 
 
 ### Tested on
 
